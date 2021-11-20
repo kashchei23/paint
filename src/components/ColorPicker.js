@@ -4,26 +4,21 @@ import { changeColor } from '../redux/ActionCreator';
 import { useDispatch } from 'react-redux';
 
 const ColorPicker = () => {
-  const [color, setColor] = useState("#aabbcc");
+  const [color, setColor] = useState("#7EC8E3");
   const dispatch = useDispatch();
   
   useEffect(() => {
     dispatch(changeColor(color)); 
   })
+  const refreshPage = () => {
+    window.location.reload();
+  }
 
   return (
-  <div className="color-picker-container">
+  <div className="color-picker-container control-child">
       <HexColorPicker color={color} onChange={setColor} />
-      <div className="color-selection">
-          <p>Current Color: </p> 
-          <div className="color-display" style={{backgroundColor: color}}></div>
-          
-          <p>Transparency</p>
-          <button>0.1</button>
-          <button>0.5</button>
-          <button>1.0</button>
-          <button>Eraser</button>
-      </div>
+      <div className="color-display" style={{backgroundColor: color}}></div>
+      <button id="reload" className="control-button" onClick={refreshPage}></button>
   </div>
   
   );

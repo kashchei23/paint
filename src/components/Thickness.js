@@ -10,13 +10,16 @@ function ThicknessComponent() {
     useEffect(() => {
       dispatch(changeThickness(thickness)); 
     },)
+
+    const handleClick = (e) => {
+      setThickness(e.target.value);
+    };
   
   return (
-    <div>
-      <p>Thickness:</p>
-      <button onClick={() => setThickness(2)}>Thin</button>
-      <button onClick={() => setThickness(6)}>Medium</button>
-      <button onClick={() => setThickness(12)}>Thick</button>
+    <div className="control-child">
+      <button type="submit" id="thickness-1" className="control-button" onClick={handleClick} value={2}></button>
+      <button type="submit" id="thickness-2" className="control-button" onClick={handleClick} value={6}></button>
+      <button type="submit" id="thickness-3" className="control-button" onClick={handleClick} value={18}></button>
     </div>
   )
 }

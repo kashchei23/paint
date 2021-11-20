@@ -1,14 +1,11 @@
 import { createStore, combineReducers } from "redux";
-import { ColorReducer } from "./ColorReducer";
-import { ThicknessReducer } from "./ThicknessReducer";
-import { TrasparencyReducer } from "./TransparencyReducer";
+import { Reducer } from "./Reducer";
+
 
 export const ConfigureStore = () => {
     const store = createStore(
         combineReducers({
-
-            ThicknessReducer,
-            TrasparencyReducer
+            Reducer
         })
     );
     return store;
