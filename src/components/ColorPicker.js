@@ -4,7 +4,7 @@ import { changeColor } from '../redux/ActionCreator';
 import { useDispatch } from 'react-redux';
 
 const ColorPicker = () => {
-  const [color, setColor] = useState("#7EC8E3");
+  const [color, setColor] = useState("#BF40BF");
   const dispatch = useDispatch();
   
   useEffect(() => {
