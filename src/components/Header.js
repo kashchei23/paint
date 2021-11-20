@@ -1,9 +1,10 @@
 import React from "react";
+import Title from '../images/Darley Paint.png'
 
 const Header = () => {
   return (
     <div>
-      <h1><span className="thin-font">Javascript</span> <i>Paint</i></h1>
+      <img className="title" src={Title} alt="DarLey Paint"/>
     </div>
   )
 }

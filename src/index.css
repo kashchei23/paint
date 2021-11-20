@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url('./images/beach.jpg');
-  background-size: 120%;
-  background-repeat: no-repeat;
+  background-size: 150%;
+
 }
 
 code {

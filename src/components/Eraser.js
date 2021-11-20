@@ -2,22 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeThickness } from '../redux/ActionCreator';
 import { changeColor } from '../redux/ActionCreator';
-import Eraser_1 from '../images/Eraser_1.svg';
+import { changeTransparency } from '../redux/ActionCreator';
 
 function EraserComponent() {
 
     const [thickness, setThickness] = useState(2);
     const [color, setColor] = useState("#FFFFFF");
+    const [transparency, setTransparency] = useState(1);
     const dispatch = useDispatch()
+
 
     useEffect(() => {
       dispatch(changeThickness(thickness)); 
       dispatch(changeColor(color));
+      dispatch(changeTransparency(transparency))
     })
 
     const handleClick = (e) => {
       setThickness(e.target.value);
       setColor("#FFFFFF");
+      setTransparency(1);
     };
   
   return (
