@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeThickness } from '../redux/ActionCreator';
+import { useSelector } from 'react-redux';
+import { changeColor } from '../redux/ActionCreator';
 
 function ThicknessComponent() {
 
     const [thickness, setThickness] = useState(2);
+    const temporaryColor = useSelector((state) => state.Reducer.TempColor.TempColor);
     const dispatch = useDispatch()
 
     useEffect(() => {
       dispatch(changeThickness(thickness)); 
     },)
-
+    
     const handleClick = (e) => {
       setThickness(e.target.value);
+      dispatch(changeColor(temporaryColor));
     };
   
   return (

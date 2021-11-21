@@ -22,7 +22,7 @@
 }
 
 canvas {
-  border: 1px solid black;
+  
   background-color: white;
   border-radius: 10px;
 }
@@ -108,4 +108,5 @@ canvas {
   border-radius: 10px;
   margin-left: 2px;
   margin-right: 2px;
+  border: none;
 }

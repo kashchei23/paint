@@ -11,7 +11,6 @@ function EraserComponent() {
     const [transparency, setTransparency] = useState(1);
     const dispatch = useDispatch()
 
-
     useEffect(() => {
       dispatch(changeThickness(thickness)); 
       dispatch(changeColor(color));

@@ -12,6 +12,9 @@ export const Reducer = (state = initialState, action) => {
     case ActionTypes.CHANGE_TRANSPARENCY:
       const newTransparency = action.payload;
       return {...state, Transparency: newTransparency};
+    case ActionTypes.CHANGE_TEMP_COLOR:
+      const newTempColor = action.payload;
+      return {...state, TempColor: newTempColor};
     default:
         return state;
   }

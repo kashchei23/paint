@@ -7,6 +7,13 @@ export const changeColor = (newColor) => ({
     }
 });
 
+export const changeTempColor = (newTempColor) => ({
+    type: ActionTypes.CHANGE_TEMP_COLOR,
+    payload: {
+        TempColor: newTempColor,
+    }
+});
+
 export const changeTransparency = (newTransparency) => ({
     type: ActionTypes.CHANGE_TRANSPARENCY,
     payload: {

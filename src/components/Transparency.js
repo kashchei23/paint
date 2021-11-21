@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeTransparency } from '../redux/ActionCreator';
+import { useSelector } from 'react-redux';
+import { changeColor } from '../redux/ActionCreator';
 
 function TransparencyComponent() {
 
     const [transparency, setTransparency] = useState(1);
+    const temporaryColor = useSelector((state) => state.Reducer.TempColor.TempColor);
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -13,6 +16,7 @@ function TransparencyComponent() {
 
     const handleClick = (e) => {
       setTransparency(e.target.value);
+      dispatch(changeColor(temporaryColor));
     };
   
   return (
