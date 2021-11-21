@@ -7,6 +7,7 @@ import { changeColor } from '../redux/ActionCreator';
 function TransparencyComponent() {
 
     const [transparency, setTransparency] = useState(1);
+    const currentColor = useSelector((state) => state.Reducer.Color.Color);
     const temporaryColor = useSelector((state) => state.Reducer.TempColor.TempColor);
     const dispatch = useDispatch()
 
@@ -16,7 +17,9 @@ function TransparencyComponent() {
 
     const handleClick = (e) => {
       setTransparency(e.target.value);
-      dispatch(changeColor(temporaryColor));
+      if(currentColor === "#FFFFFF"){
+        dispatch(changeColor(temporaryColor));
+      }
     };
   
   return (

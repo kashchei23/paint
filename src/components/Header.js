@@ -1,5 +1,5 @@
 import React from "react";
-import Title from '../images/Darley Paint.png'
+import Title from '../images/Darley.svg'
 
 const Header = () => {
   return (

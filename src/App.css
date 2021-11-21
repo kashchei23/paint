@@ -5,7 +5,9 @@
 }
 
 .title {
-  height: 100px;
+  height: 300px;
+  margin-top: -45px;
+  margin-bottom: -80px;
 }
 .color-picker-container {
   display: flex; 
@@ -96,7 +98,7 @@ canvas {
 #reload {
   background-image: url('./images/Refresh.svg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 90%;
   margin-left: 20px;
 }
 

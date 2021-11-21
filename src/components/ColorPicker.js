@@ -8,26 +8,22 @@ const ColorPicker = () => {
   const [color, setColor] = useState("#BF40BF");
   const dispatch = useDispatch();
   
- 
+  let tempColor;
+  if(color !== "#FFFFFF" ) {
+    tempColor = color;
+  }
 
   const refreshPage = () => {
     window.location.reload();
   }
 
-  let temporaryColor;
-
-  if(color !== "#FFFFFF" ) {
-    temporaryColor = color;
-   
-  }
-
   useEffect(() => {
     dispatch(changeColor(color)); 
-    dispatch(changeTempColor(temporaryColor))
+    dispatch(changeTempColor(tempColor))
   })
 
   const handleClick = (e) => {
-    dispatch(changeColor(temporaryColor));
+    dispatch(changeColor(tempColor));
   };
 
   return (

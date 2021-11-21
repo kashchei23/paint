@@ -7,19 +7,19 @@ import { changeTransparency } from '../redux/ActionCreator';
 function EraserComponent() {
 
     const [thickness, setThickness] = useState(2);
-    const [color, setColor] = useState("#FFFFFF");
     const [transparency, setTransparency] = useState(1);
     const dispatch = useDispatch()
 
     useEffect(() => {
       dispatch(changeThickness(thickness)); 
-      dispatch(changeColor(color));
+      
       dispatch(changeTransparency(transparency))
     })
 
     const handleClick = (e) => {
+      console.log('Im clicking');
       setThickness(e.target.value);
-      setColor("#FFFFFF");
+      dispatch(changeColor("#FFFFFF"));
       setTransparency(1);
     };
   
