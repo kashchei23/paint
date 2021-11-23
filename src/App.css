@@ -56,7 +56,7 @@
 
 .control-child{
   height: 120px;
- } 
+} 
 
 .color-picker-container {
   display: flex; 
@@ -178,7 +178,6 @@ a.footer-button:hover {
   background-color: rgb(255,192,203, 0.8);
   color: black;
   box-shadow: 2px 2px 15px white, -2px -2px 15px white, 2px -2px 15px white, -2px 2px 15px white;
-  
 }
 
 a, a:visited, a:hover, a:active {

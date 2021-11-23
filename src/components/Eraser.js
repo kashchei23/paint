@@ -34,7 +34,6 @@ function EraserComponent() {
       <button type="submit" id="thin-eraser" className="control-button" onClick={handleClick} value={2} ></button>
       <button type="submit" id="med-eraser" className="control-button" onClick={handleClick} value={6}></button>
       <button type="submit" id="lg-eraser" className="control-button"onClick={handleClick} value={18}></button>
-
     </div>
   )
 }

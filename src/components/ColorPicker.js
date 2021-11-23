@@ -27,7 +27,6 @@ const ColorPicker = () => {
       <button type="submit" id="color-button" className="control-button color-display" style={{backgroundColor: color}} onClick={handleClick}></button>
       <HexColorPicker className="control-button" color={color} onChange={setColor} />
   </div>
-  
   );
 };
 
