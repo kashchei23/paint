@@ -4,14 +4,8 @@ import { useSelector } from 'react-redux';
 function CanvasComponent(){
 
   const currentColor = useSelector((state) => state.Reducer.Color.Color);
-  const temporaryColor = useSelector((state) => state.Reducer.TempColor.TempColor);
   const currentThickness = useSelector((state) => state.Reducer.Thickness.Thickness);
   const currentTrasparency = useSelector((state) => state.Reducer.Transparency.Transparency);
-
-  console.log('current color', currentColor);
-  console.log('temp color', temporaryColor);
-  console.log('current transp', currentTrasparency);
-  console.log('current thick', currentThickness);
 
   useEffect(() => {
 
@@ -62,7 +56,7 @@ function CanvasComponent(){
   
   return (
     <div>
-      <canvas width="900" height="600">Alt text: this is the canvas</canvas>
+      <canvas>Alt text: this is the canvas</canvas>
     </div>
   )
 }

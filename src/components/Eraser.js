@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { changeThickness } from '../redux/ActionCreator';
 import { changeColor } from '../redux/ActionCreator';
 import { changeTransparency } from '../redux/ActionCreator';
@@ -8,7 +8,6 @@ function EraserComponent() {
 
     const [thickness, setThickness] = useState(2);
     const [transparency, setTransparency] = useState(1);
-    const temporaryColor = useSelector((state) => state.Reducer.TempColor.TempColor);
     const dispatch = useDispatch()
 
     useEffect(() => {

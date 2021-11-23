@@ -6,7 +6,6 @@ import { changeColor } from '../redux/ActionCreator';
 
 function ThicknessComponent() {
 
-
     const temporaryColor = useSelector((state) => state.Reducer.TempColor.TempColor);
     const dispatch = useDispatch()
     

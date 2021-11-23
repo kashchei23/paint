@@ -73,6 +73,15 @@
 canvas {
   background-color: white;
   border-radius: 10px;
+  width: 900px;
+  height: 600px;
+}
+
+@media (max-width: 1165px) {
+  canvas{
+      width: 500px;
+      height: 600px;
+  }
 }
 
 #thickness-1{
