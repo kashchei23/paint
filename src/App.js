@@ -17,7 +17,7 @@ function App() {
                 <TransparencyComponent />
                 <EraserComponent />
                 <ColorPicker />
-                <a className="footer-button" href="https://darleypaint.vercel.app/">Back to Home</a>
+                <a className="footer-button" href="https://darleyinfo.vercel.app/">Back to Home</a>
             </div>
             <CanvasComponent />
         </div>
