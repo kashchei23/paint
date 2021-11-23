@@ -23,7 +23,8 @@ function TransparencyComponent() {
     };
   
   return (
-    <div className="control-child">
+    <div className="control-child transparency-container">
+    <p className="control-title">Transparency</p>
           <button type="submit" id="transp-1" className="control-button" onClick={handleClick} value={1}></button>
           <button type="submit" id="transp-2" className="control-button" onClick={handleClick} value={0.05}></button>
           <button type="submit" id="transp-3" className="control-button" onClick={handleClick} value={0.01}></button>

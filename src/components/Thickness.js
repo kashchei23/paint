@@ -16,7 +16,8 @@ function ThicknessComponent() {
     };
   
   return (
-    <div className="control-child">
+    <div className="control-child thickness-container">
+    <p className="control-title">Thickness </p>
       <button type="submit" id="thickness-1" className="control-button" onClick={handleClick} value={2}></button>
       <button type="submit" id="thickness-2" className="control-button" onClick={handleClick} value={6}></button>
       <button type="submit" id="thickness-3" className="control-button" onClick={handleClick} value={18}></button>

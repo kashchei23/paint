@@ -28,9 +28,9 @@ const ColorPicker = () => {
 
   return (
   <div className="color-picker-container control-child">
-      <HexColorPicker className="control-button" color={color} onChange={setColor} />
       <button type="submit" id="color-button" className="control-button color-display" style={{backgroundColor: color}} onClick={handleClick}></button>
-      <button id="reload" className="control-button" onClick={refreshPage}></button>
+     
+      <HexColorPicker className="control-button" color={color} onChange={setColor} />
   </div>
   
   );

@@ -2,23 +2,70 @@
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  padding-bottom: 50px;
 }
 
 .title {
   height: 300px;
   margin-top: -45px;
-  margin-bottom: -80px;
-
-  
+  margin-bottom: -80px;  
 }
+
+.contol-canvas-display{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
+
+.control-title{
+  height: 3px;
+  margin-top: -20px;
+}
+
+.control-title-eraser{
+  height: 3px;
+  padding-top: -25px;
+}
+
+.control-container {
+  justify-self: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-right: 15px;
+  width: 225px;
+  height: 600px;
+}
+
+.thickness-container {
+  order: 2;
+}
+
+.transparency-container{
+  order: 3;
+}
+
+.eraser-container{
+  order:4;
+  margin-top: -25px;
+}
+
+.control-child{
+  height: 120px;
+ } 
+
 .color-picker-container {
   display: flex; 
   align-items: flex-end;
+  order: 1;
+  padding-top: 80px;
 }
 
 .color-display {
-  width: 50px;
-  height: 200px;
   border-radius: 10px;
   margin-left: 10px;
 }
@@ -26,18 +73,6 @@
 canvas {
   background-color: white;
   border-radius: 10px;
-}
-
-.control-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.control-child{
-  margin-right: 8px;
-  margin-left: 8px;
 }
 
 #thickness-1{
@@ -102,8 +137,8 @@ canvas {
 }
 
 .control-button {
-  width: 50px;
-  height: 200px;
+  width: 30px;
+  height: 140px;
   pointer-events: all;
   background-color: white;
   border-radius: 10px;
@@ -114,6 +149,30 @@ canvas {
 
 button:active {
     box-shadow: inset -5px -5px 5px #c1c1c1, inset 5px 5px 5px #c1c1c1;
-  
+}
 
+#color-button{
+  height: 200px;
+}
+
+.footer-button {
+  background-color: white;
+  border-radius: 5px;
+  padding: 8px;
+  color: black;
+  order:5;
+  height: 23px;
+  align-self: flex-end;
+}
+
+a.footer-button:hover {
+  background-color: rgb(255,192,203, 0.8);
+  color: black;
+  box-shadow: 2px 2px 15px white, -2px -2px 15px white, 2px -2px 15px white, -2px 2px 15px white;
+  
+}
+
+a, a:visited, a:hover, a:active {
+  color: black;
+  text-decoration: none;
 }

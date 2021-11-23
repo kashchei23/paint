@@ -10,14 +10,18 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="control-container">
-          <ThicknessComponent />
-          <TransparencyComponent />
-          <EraserComponent />
-          <ColorPicker />
-      </div>
-      <CanvasComponent />
+        <Header />
+        <div className="contol-canvas-display">
+            <div className="control-container">
+                <ThicknessComponent />
+                <TransparencyComponent />
+                <EraserComponent />
+                <ColorPicker />
+                <a className="footer-button" href="https://darleypaint.vercel.app/">Back to Home</a>
+            </div>
+            <CanvasComponent />
+        </div>
+        
     </div>
   );
 }
