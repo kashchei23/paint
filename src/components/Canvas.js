@@ -15,18 +15,7 @@ function CanvasComponent(){
     const canvas = document.querySelector('canvas');
     const context = canvas.getContext('2d');
 
-     /* Setting size of canvas based on screen size */
-    function canvasSize(screenSize) {
-      if (screenSize.matches) { 
-        canvas.width=600;
-      } else {
-        canvas.width=900;
-      }
-    }
-  
-  let screenSize = window.matchMedia("(max-width: 1165px)")
-  canvasSize(screenSize) 
-  screenSize.onchange = canvasSize;
+   
 
     /* tracking mouse for free-drawing */
 
@@ -65,6 +54,7 @@ function CanvasComponent(){
       context.stroke();
       context.closePath();
     }
+
   })
   
   return (
