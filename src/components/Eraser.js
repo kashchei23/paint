@@ -29,7 +29,8 @@ function EraserComponent() {
   
   return (
     <div className="control-child eraser-container">
-      <p className="control-title-eraser">Clear &nbsp; &nbsp;   Eraser&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p className="control-title-eraser">Save Clear &nbsp; &nbsp; &nbsp;  Eraser&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <button id="download" className="control-button"></button>
       <button id="reload" className="control-button" onClick={refreshPage}></button>
       <button type="submit" id="thin-eraser" className="control-button" onClick={handleClick} value={2} ></button>
       <button type="submit" id="med-eraser" className="control-button" onClick={handleClick} value={6}></button>

@@ -133,8 +133,15 @@ canvas {
   background-image: url('./images/Refresh.svg');
   background-repeat: no-repeat;
   background-size: 90%;
-  margin-left: 6px;
 }
+
+#download {
+  background-image: url('./images/Download.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
 
 .control-button {
   width: 30px;
@@ -174,4 +181,12 @@ a.footer-button:hover {
 a, a:visited, a:hover, a:active {
   color: black;
   text-decoration: none;
+}
+
+#download{
+  margin-right: 20px;
+}
+
+#reload{
+  margin-right: 20px;
 }

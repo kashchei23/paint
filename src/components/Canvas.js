@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from 'react-redux';
 
 function CanvasComponent(){
@@ -6,6 +6,8 @@ function CanvasComponent(){
   const currentColor = useSelector((state) => state.Reducer.Color.Color);
   const currentThickness = useSelector((state) => state.Reducer.Thickness.Thickness);
   const currentTrasparency = useSelector((state) => state.Reducer.Transparency.Transparency);
+  
+  const [Background, setBackground] = useState(false);
 
   useEffect(() => {
 
@@ -15,7 +17,20 @@ function CanvasComponent(){
     const canvas = document.querySelector('canvas');
     const context = canvas.getContext('2d');
 
-   
+    //set background to white using closure so it only happens once
+    let Backgroundfunction = (function() {
+      return function() {
+          if (!Background) {
+            setBackground(true);
+              let w = canvas.width;
+              let h = canvas.height;
+              context.fillStyle = "white";
+              context.fillRect(0,0,w,h);
+          }
+        };
+    })();
+
+    Backgroundfunction();
 
     /* tracking mouse for free-drawing */
 
@@ -54,12 +69,25 @@ function CanvasComponent(){
       context.stroke();
       context.closePath();
     }
+    const download = document.getElementById('download');
 
-  })
+    download.addEventListener('click', function(e) {
+      const link = document.createElement('a');
+      link.download = 'MyImage.png';
+      link.href = canvas.toDataURL();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      console.log('im downloading')
+      
+    });
+
+});
+
   
   return (
     <div>
-      <canvas width="900" height="600">Alt text: this is the canvas</canvas>
+      <canvas id="canvas" width="900" height="600">Alt text: this is the canvas</canvas>
     </div>
   )
 }
